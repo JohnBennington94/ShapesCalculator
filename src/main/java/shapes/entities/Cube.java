@@ -3,7 +3,7 @@ package shapes.entities;
 public class Cube extends Shape {
 
     public Cube(double width) {
-        super(width, "Cube");
+        super(width);
     }
 
     @Override

@@ -1,4 +1,4 @@
-package services;
+package shapes.services;
 
 import shapes.entities.*;
 import sun.reflect.generics.reflectiveObjects.NotImplementedException;

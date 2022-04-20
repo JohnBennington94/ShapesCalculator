@@ -2,22 +2,31 @@
 <project version="4">
   <component name="ChangeListManager">
     <list default="true" id="124d9c27-4119-4e44-ad02-2ff06038da3d" name="Default Changelist" comment="">
-      <change afterPath="$PROJECT_DIR$/src/main/java/services/ShapeService.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/main/java/shapes/entities/ShapeType.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/test/java/calculator/CalculatorTest.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/.gitignore" beforeDir="false" afterPath="$PROJECT_DIR$/.gitignore" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/compiler.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/compiler.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/misc.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/misc.xml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/README.md" beforeDir="false" afterPath="$PROJECT_DIR$/README.md" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/ShapesCalculator.iml" beforeDir="false" afterPath="$PROJECT_DIR$/ShapesCalculator.iml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/pom.xml" beforeDir="false" afterPath="$PROJECT_DIR$/pom.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/services/ShapeService.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/shapes/services/ShapeService.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/main/java/shapes/ShapeCalculator.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/shapes/ShapeCalculator.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/main/java/shapes/entities/Cube.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/shapes/entities/Cube.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/main/java/shapes/entities/Shape.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/shapes/entities/Shape.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/main/java/shapes/entities/Sphere.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/shapes/entities/Sphere.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/main/java/shapes/entities/Tetrahedron.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/shapes/entities/Tetrahedron.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/test/java/shapes/ShapeTest.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/test/java/shapes/ShapeServiceTest.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/test/java/shapes/ShapeServiceTest.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/test/java/shapes/ShapeServiceTest.java" afterDir="false" />
     </list>
     <option name="EXCLUDED_CONVERTED_TO_IGNORED" value="true" />
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
     <option name="HIGHLIGHT_NON_ACTIVE_CHANGELIST" value="false" />
     <option name="LAST_RESOLUTION" value="IGNORE" />
+  </component>
+  <component name="CoverageViewManager">
+    <option name="myFlattenPackages" value="true" />
+    <option name="myElementSize" value="225" />
   </component>
   <component name="FileTemplateManagerImpl">
     <option name="RECENT_TEMPLATES">
@@ -41,15 +50,22 @@
     <property name="com.intellij.testIntegration.createTest.CreateTestDialog.defaultLibrary" value="JUnit5" />
     <property name="com.intellij.testIntegration.createTest.CreateTestDialog.defaultLibrarySuperClass.JUnit5" value="" />
     <property name="last_opened_file_path" value="$PROJECT_DIR$" />
-    <property name="project.structure.last.edited" value="SDKs" />
+    <property name="project.structure.last.edited" value="Modules" />
     <property name="project.structure.proportion" value="0.15" />
     <property name="project.structure.side.proportion" value="0.2" />
-    <property name="settings.editor.selected.configurable" value="project.propVCSSupport.Mappings" />
+    <property name="settings.editor.selected.configurable" value="reference.projectsettings.compiler.javacompiler" />
   </component>
   <component name="RecentsManager">
     <key name="CreateTestDialog.RecentsKey">
       <recent name="shapes" />
       <recent name="test" />
+    </key>
+    <key name="CopyClassDialog.RECENTS_KEY">
+      <recent name="calculator" />
+    </key>
+    <key name="MoveClassesOrPackagesDialog.RECENTS_KEY">
+      <recent name="shapes" />
+      <recent name="" />
     </key>
     <key name="CreateTestDialog.Recents.Supers">
       <recent name="" />
@@ -70,97 +86,107 @@
       </list>
     </option>
   </component>
-  <component name="RunManager" selected="JUnit.ShapeServiceTest">
-    <configuration name="ShapeCalculator" type="Application" factoryName="Application" temporary="true" nameIsGenerated="true">
-      <option name="MAIN_CLASS_NAME" value="shapes.ShapeCalculator" />
-      <module name="ShapesCalculator" />
-      <option name="PROGRAM_PARAMETERS" value="SPHERE 3.5" />
-      <extension name="coverage">
-        <pattern>
-          <option name="PATTERN" value="main.shapes.*" />
-          <option name="ENABLED" value="true" />
-        </pattern>
-      </extension>
-      <method v="2">
-        <option name="Make" enabled="true" />
-      </method>
-    </configuration>
-    <configuration name="ShapeServiceTest" type="JUnit" factoryName="JUnit" temporary="true" nameIsGenerated="true">
+  <component name="RunManager" selected="JUnit.Tags (UnitTest )">
+    <configuration name="CalculatorTest.emptyArgsReturnsExitOne" type="JUnit" factoryName="JUnit" temporary="true" nameIsGenerated="true">
       <module name="ShapesCalculator" />
       <extension name="coverage">
         <pattern>
-          <option name="PATTERN" value="shapes.*" />
+          <option name="PATTERN" value="calculator.*" />
           <option name="ENABLED" value="true" />
         </pattern>
       </extension>
-      <option name="PACKAGE_NAME" value="shapes" />
-      <option name="MAIN_CLASS_NAME" value="shapes.ShapeServiceTest" />
-      <option name="TEST_OBJECT" value="class" />
-      <method v="2">
-        <option name="Make" enabled="true" />
-      </method>
-    </configuration>
-    <configuration name="ShapeTest" type="JUnit" factoryName="JUnit" temporary="true" nameIsGenerated="true">
-      <module name="ShapesCalculator" />
-      <extension name="coverage">
-        <pattern>
-          <option name="PATTERN" value="shapes.*" />
-          <option name="ENABLED" value="true" />
-        </pattern>
-      </extension>
-      <option name="PACKAGE_NAME" value="shapes" />
-      <option name="MAIN_CLASS_NAME" value="shapes.ShapeTest" />
-      <option name="TEST_OBJECT" value="class" />
-      <method v="2">
-        <option name="Make" enabled="true" />
-      </method>
-    </configuration>
-    <configuration name="SphereTest.calculateSphereVolumeWithRadius (1)" type="JUnit" factoryName="JUnit" temporary="true" nameIsGenerated="true">
-      <module name="ShapesCalculator" />
-      <extension name="coverage">
-        <pattern>
-          <option name="PATTERN" value="shapes.*" />
-          <option name="ENABLED" value="true" />
-        </pattern>
-      </extension>
-      <option name="PACKAGE_NAME" value="shapes" />
-      <option name="MAIN_CLASS_NAME" value="shapes.SphereTest" />
-      <option name="METHOD_NAME" value="calculateSphereVolumeWithRadius(int,double)" />
+      <option name="PACKAGE_NAME" value="calculator" />
+      <option name="MAIN_CLASS_NAME" value="calculator.CalculatorTest" />
+      <option name="METHOD_NAME" value="emptyArgsReturnsExitOne" />
       <option name="TEST_OBJECT" value="method" />
       <method v="2">
         <option name="Make" enabled="true" />
       </method>
     </configuration>
-    <configuration name="SphereTest.calculateSphereVolumeWithRadius" type="JUnit" factoryName="JUnit" temporary="true" nameIsGenerated="true">
+    <configuration name="CalculatorTest.parseMeasureUnsupportedReturnsExitOne" type="JUnit" factoryName="JUnit" temporary="true" nameIsGenerated="true">
       <module name="ShapesCalculator" />
       <extension name="coverage">
+        <pattern>
+          <option name="PATTERN" value="calculator.*" />
+          <option name="ENABLED" value="true" />
+        </pattern>
+      </extension>
+      <option name="PACKAGE_NAME" value="calculator" />
+      <option name="MAIN_CLASS_NAME" value="calculator.CalculatorTest" />
+      <option name="METHOD_NAME" value="parseMeasureUnsupportedReturnsExitOne" />
+      <option name="TEST_OBJECT" value="method" />
+      <method v="2">
+        <option name="Make" enabled="true" />
+      </method>
+    </configuration>
+    <configuration name="CalculatorTest.parseShapeTypeReturnsCorrectSphereEnum" type="JUnit" factoryName="JUnit" temporary="true" nameIsGenerated="true">
+      <module name="ShapesCalculator" />
+      <extension name="coverage">
+        <pattern>
+          <option name="PATTERN" value="calculator.*" />
+          <option name="ENABLED" value="true" />
+        </pattern>
+      </extension>
+      <option name="PACKAGE_NAME" value="calculator" />
+      <option name="MAIN_CLASS_NAME" value="calculator.CalculatorTest" />
+      <option name="METHOD_NAME" value="parseShapeTypeReturnsCorrectSphereEnum(java.lang.String)" />
+      <option name="TEST_OBJECT" value="method" />
+      <method v="2">
+        <option name="Make" enabled="true" />
+      </method>
+    </configuration>
+    <configuration name="CalculatorTest.parseShapeTypeUnsupportedReturnsExitOne" type="JUnit" factoryName="JUnit" temporary="true" nameIsGenerated="true">
+      <module name="ShapesCalculator" />
+      <extension name="coverage">
+        <pattern>
+          <option name="PATTERN" value="calculator.*" />
+          <option name="ENABLED" value="true" />
+        </pattern>
+      </extension>
+      <option name="PACKAGE_NAME" value="calculator" />
+      <option name="MAIN_CLASS_NAME" value="calculator.CalculatorTest" />
+      <option name="METHOD_NAME" value="parseShapeTypeUnsupportedReturnsExitOne" />
+      <option name="TEST_OBJECT" value="method" />
+      <method v="2">
+        <option name="Make" enabled="true" />
+      </method>
+    </configuration>
+    <configuration default="true" type="JUnit" factoryName="JUnit">
+      <module name="ShapesCalculator" />
+      <extension name="coverage">
+        <pattern>
+          <option name="PATTERN" value="calculator.*" />
+          <option name="ENABLED" value="true" />
+        </pattern>
         <pattern>
           <option name="PATTERN" value="shapes.*" />
           <option name="ENABLED" value="true" />
         </pattern>
       </extension>
-      <option name="PACKAGE_NAME" value="shapes" />
-      <option name="MAIN_CLASS_NAME" value="shapes.SphereTest" />
-      <option name="METHOD_NAME" value="calculateSphereVolumeWithRadius" />
-      <option name="TEST_OBJECT" value="method" />
+      <option name="ALTERNATIVE_JRE_PATH_ENABLED" value="true" />
+      <option name="ALTERNATIVE_JRE_PATH" value="1.8" />
+      <option name="PACKAGE_NAME" value="calculator" />
+      <option name="MAIN_CLASS_NAME" value="calculator.CalculatorTest" />
+      <option name="METHOD_NAME" value="" />
+      <option name="TEST_OBJECT" value="class" />
+      <option name="PARAMETERS" value="" />
       <method v="2">
         <option name="Make" enabled="true" />
       </method>
     </configuration>
     <list>
-      <item itemvalue="Application.ShapeCalculator" />
-      <item itemvalue="JUnit.SphereTest.calculateSphereVolumeWithRadius" />
-      <item itemvalue="JUnit.SphereTest.calculateSphereVolumeWithRadius (1)" />
-      <item itemvalue="JUnit.ShapeTest" />
-      <item itemvalue="JUnit.ShapeServiceTest" />
+      <item itemvalue="JUnit.Tags (UnitTest )" />
+      <item itemvalue="JUnit.CalculatorTest.parseShapeTypeReturnsCorrectSphereEnum" />
+      <item itemvalue="JUnit.CalculatorTest.emptyArgsReturnsExitOne" />
+      <item itemvalue="JUnit.CalculatorTest.parseShapeTypeUnsupportedReturnsExitOne" />
+      <item itemvalue="JUnit.CalculatorTest.parseMeasureUnsupportedReturnsExitOne" />
     </list>
     <recent_temporary>
       <list>
-        <item itemvalue="JUnit.ShapeServiceTest" />
-        <item itemvalue="Application.ShapeCalculator" />
-        <item itemvalue="JUnit.ShapeTest" />
-        <item itemvalue="JUnit.SphereTest.calculateSphereVolumeWithRadius (1)" />
-        <item itemvalue="JUnit.SphereTest.calculateSphereVolumeWithRadius" />
+        <item itemvalue="JUnit.CalculatorTest.parseMeasureUnsupportedReturnsExitOne" />
+        <item itemvalue="JUnit.CalculatorTest.parseShapeTypeUnsupportedReturnsExitOne" />
+        <item itemvalue="JUnit.CalculatorTest.emptyArgsReturnsExitOne" />
+        <item itemvalue="JUnit.CalculatorTest.parseShapeTypeReturnsCorrectSphereEnum" />
       </list>
     </recent_temporary>
   </component>
@@ -194,5 +220,13 @@
     <ignored-roots>
       <path value="$PROJECT_DIR$/.." />
     </ignored-roots>
+  </component>
+  <component name="com.intellij.coverage.CoverageDataManagerImpl">
+    <SUITE FILE_PATH="coverage/ShapesCalculator$Tags__UnitTest__.ic" NAME="Tags (UnitTest ) Coverage Results" MODIFIED="1650487584650" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="idea" COVERAGE_BY_TEST_ENABLED="false" COVERAGE_TRACING_ENABLED="false">
+      <FILTER>shapes.*</FILTER>
+    </SUITE>
+    <SUITE FILE_PATH="coverage/ShapesCalculator$CalculatorTest.ic" NAME="CalculatorTest Coverage Results" MODIFIED="1650487264041" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="idea" COVERAGE_BY_TEST_ENABLED="false" COVERAGE_TRACING_ENABLED="false">
+      <FILTER>shapes.*</FILTER>
+    </SUITE>
   </component>
 </project>

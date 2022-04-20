@@ -1,37 +1,51 @@
 package shapes;
 
+import org.junit.jupiter.api.Assertions;
 import org.junit.jupiter.api.DisplayName;
+import org.junit.jupiter.api.Tag;
+import org.junit.jupiter.api.Test;
 import org.junit.jupiter.params.ParameterizedTest;
-import org.junit.jupiter.params.provider.CsvSource;
-import services.ShapeService;
-import shapes.entities.Cube;
-import shapes.entities.ShapeType;
-import shapes.entities.Sphere;
-import shapes.entities.Tetrahedron;
+import org.junit.jupiter.params.provider.ValueSource;
+import shapes.entities.*;
+import shapes.services.ShapeService;
+import sun.reflect.generics.reflectiveObjects.NotImplementedException;
 
+@Tag("UnitTest")
 class ShapeServiceTest {
 
     @ParameterizedTest
-    @CsvSource({"1, 4.19", "5, 523.81"})
-    @DisplayName("Calculate volume of sphere works as expected")
-    void calculateSphereVolumeWithRadius(double radius, double expectedValue){
-        Sphere sphere = (Sphere)ShapeService.getShapeObject(ShapeType.SPHERE, radius);
-        assert sphere.calculateVolume() == expectedValue;
+    @ValueSource(doubles = {2, 5.99})
+    @DisplayName("Shape factory generates expected sphere object")
+    void shapeFactoryReturnsExpectedSphereObject(double measure) {
+        Shape shape = ShapeService.getShapeObject(ShapeType.SPHERE, measure);
+        assert shape.getMeasure() == measure;
+        assert shape instanceof Sphere;
     }
 
     @ParameterizedTest
-    @CsvSource({"1, 1.00", "5, 125.00"})
-    @DisplayName("Calculate volume of cube works as expected")
-    void calculateCubeVolumeWithWidth(double width, double expectedValue){
-        Cube cube = (Cube) ShapeService.getShapeObject(ShapeType.CUBE, width);
-        assert cube.calculateVolume() == expectedValue;
+    @ValueSource(doubles = {0.9, 10})
+    @DisplayName("Shape factory generates expected cube object")
+    void shapeFactoryReturnsExpectedCubeObject(double measure) {
+        Shape shape = ShapeService.getShapeObject(ShapeType.CUBE, measure);
+        assert shape.getMeasure() == measure;
+        assert shape instanceof Cube;
     }
 
     @ParameterizedTest
-    @CsvSource({"1, 0.12", "5, 14.73"})
-    @DisplayName("Calculate volume of tetrahedron works as expected")
-    void calculateTetrahedronVolumeWithEdge(double edge, double expectedValue){
-        Tetrahedron tetrahedron = (Tetrahedron)ShapeService.getShapeObject(ShapeType.TETRAHEDRON, edge);
-        assert tetrahedron.calculateVolume() == expectedValue;
+    @ValueSource(doubles = {999, 5.9})
+    @DisplayName("Shape factory generates expected tetrahedron object")
+    void shapeFactoryReturnsExpectedTetrahedronObject(double measure) {
+        Shape shape = ShapeService.getShapeObject(ShapeType.TETRAHEDRON, measure);
+        assert shape.getMeasure() == measure;
+        assert shape instanceof Tetrahedron;
     }
+
+    @Test
+    @DisplayName("Shape factory throws NotImplementedException for unexpected Enum")
+    void shapeFactoryThrowsExceptionForUnexpectedEnum() {
+        NotImplementedException thrown = Assertions.assertThrows(NotImplementedException.class, () -> {
+            ShapeService.getShapeObject(null, 6.0);
+        });
+    }
+
 }

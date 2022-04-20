@@ -3,7 +3,7 @@ package shapes.entities;
 public class Sphere extends Shape {
 
     public Sphere(double radius) {
-        super(radius, "Sphere");
+        super(radius);
     }
 
     @Override

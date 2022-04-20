@@ -3,7 +3,7 @@ package shapes.entities;
 public class Tetrahedron extends Shape {
 
     public Tetrahedron(double edge) {
-        super(edge, "Tetrahedron");
+        super(edge);
     }
 
     @Override

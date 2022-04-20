@@ -4,12 +4,10 @@ package shapes.entities;
 public abstract class Shape {
 
     private double measure;
-    private String shapeName;
     private double piValue = 3.14285714286;
 
-    public Shape(double radius, String shapeName){
-        this.measure = radius;
-        this.shapeName = shapeName;
+    public Shape(double radius){
+        this.setMeasure(radius);
     }
 
     abstract public double calculateVolume();
@@ -22,16 +20,8 @@ public abstract class Shape {
         return measure;
     }
 
-    public void setMeasure(int measure) {
+    public void setMeasure(double measure) {
         this.measure = measure;
-    }
-
-    public String getShapeName() {
-        return shapeName;
-    }
-
-    public void setShapeName(String shapeName) {
-        this.shapeName = shapeName;
     }
 
     public double getPiValue() {
