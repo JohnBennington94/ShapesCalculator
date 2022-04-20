@@ -2,17 +2,16 @@ package shapes.entities;
 
 public class Cube extends Shape {
 
-    public Cube(int width) {
+    public Cube(double width) {
         super(width, "Cube");
     }
 
     @Override
     public double calculateVolume() {
-        int width = this.getMeasure();
+        double width = this.getMeasure();
 
         // volume == r^3
         double volume=(width*width*width);
-        System.out.println("Volume of the "+this.getShapeName()+"="+volume);
 
         // Round volume to 2 decimal places
         return this.roundDoubleToTwoDecimalsPlaces(volume);

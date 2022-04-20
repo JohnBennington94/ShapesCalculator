@@ -2,8 +2,16 @@
 <project version="4">
   <component name="ChangeListManager">
     <list default="true" id="124d9c27-4119-4e44-ad02-2ff06038da3d" name="Default Changelist" comment="">
-      <change beforePath="$PROJECT_DIR$/.idea/vcs.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/vcs.xml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/java/services/ShapeService.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/java/shapes/entities/ShapeType.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/README.md" beforeDir="false" afterPath="$PROJECT_DIR$/README.md" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/shapes/ShapeCalculator.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/shapes/ShapeCalculator.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/shapes/entities/Cube.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/shapes/entities/Cube.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/shapes/entities/Shape.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/shapes/entities/Shape.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/shapes/entities/Sphere.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/shapes/entities/Sphere.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/shapes/entities/Tetrahedron.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/shapes/entities/Tetrahedron.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/test/java/shapes/ShapeTest.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/test/java/shapes/ShapeServiceTest.java" afterDir="false" />
     </list>
     <option name="EXCLUDED_CONVERTED_TO_IGNORED" value="true" />
     <option name="SHOW_DIALOG" value="false" />
@@ -16,6 +24,7 @@
       <list>
         <option value="JUnit5 Test Class" />
         <option value="Class" />
+        <option value="Enum" />
       </list>
     </option>
   </component>
@@ -61,16 +70,32 @@
       </list>
     </option>
   </component>
-  <component name="RunManager" selected="JUnit.ShapeTest">
+  <component name="RunManager" selected="JUnit.ShapeServiceTest">
     <configuration name="ShapeCalculator" type="Application" factoryName="Application" temporary="true" nameIsGenerated="true">
       <option name="MAIN_CLASS_NAME" value="shapes.ShapeCalculator" />
       <module name="ShapesCalculator" />
+      <option name="PROGRAM_PARAMETERS" value="SPHERE 3.5" />
       <extension name="coverage">
         <pattern>
           <option name="PATTERN" value="main.shapes.*" />
           <option name="ENABLED" value="true" />
         </pattern>
       </extension>
+      <method v="2">
+        <option name="Make" enabled="true" />
+      </method>
+    </configuration>
+    <configuration name="ShapeServiceTest" type="JUnit" factoryName="JUnit" temporary="true" nameIsGenerated="true">
+      <module name="ShapesCalculator" />
+      <extension name="coverage">
+        <pattern>
+          <option name="PATTERN" value="shapes.*" />
+          <option name="ENABLED" value="true" />
+        </pattern>
+      </extension>
+      <option name="PACKAGE_NAME" value="shapes" />
+      <option name="MAIN_CLASS_NAME" value="shapes.ShapeServiceTest" />
+      <option name="TEST_OBJECT" value="class" />
       <method v="2">
         <option name="Make" enabled="true" />
       </method>
@@ -127,13 +152,15 @@
       <item itemvalue="JUnit.SphereTest.calculateSphereVolumeWithRadius" />
       <item itemvalue="JUnit.SphereTest.calculateSphereVolumeWithRadius (1)" />
       <item itemvalue="JUnit.ShapeTest" />
+      <item itemvalue="JUnit.ShapeServiceTest" />
     </list>
     <recent_temporary>
       <list>
+        <item itemvalue="JUnit.ShapeServiceTest" />
+        <item itemvalue="Application.ShapeCalculator" />
         <item itemvalue="JUnit.ShapeTest" />
         <item itemvalue="JUnit.SphereTest.calculateSphereVolumeWithRadius (1)" />
         <item itemvalue="JUnit.SphereTest.calculateSphereVolumeWithRadius" />
-        <item itemvalue="Application.ShapeCalculator" />
       </list>
     </recent_temporary>
   </component>

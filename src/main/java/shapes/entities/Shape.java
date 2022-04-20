@@ -1,12 +1,13 @@
 package shapes.entities;
 
-abstract class Shape {
 
-    private int measure;
+public abstract class Shape {
+
+    private double measure;
     private String shapeName;
     private double piValue = 3.14285714286;
 
-    public Shape(int radius, String shapeName){
+    public Shape(double radius, String shapeName){
         this.measure = radius;
         this.shapeName = shapeName;
     }
@@ -17,7 +18,7 @@ abstract class Shape {
         return (double)Math.round(value * 100d) / 100d;
     }
 
-    public int getMeasure() {
+    public double getMeasure() {
         return measure;
     }
 
