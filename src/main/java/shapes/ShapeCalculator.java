@@ -18,8 +18,8 @@ public class ShapeCalculator {
         double measure = parseMeasure(args[1]);
 
         // Some output for user
-        System.out.println("Shape type passed:" + args[0]);
-        System.out.println("Measure (eg radius/width/edge) length passed:" + args[1]);
+        System.out.println("Shape type passed: " + args[0]);
+        System.out.println("Measure (eg radius/width/edge) length passed: " + args[1]);
 
         // Run calculator app for shape and measure
         double volume = runCalculatorApplication(shapeArg, measure);

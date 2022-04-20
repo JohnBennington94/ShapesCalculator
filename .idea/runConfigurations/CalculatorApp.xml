@@ -1,0 +1,10 @@
+<component name="ProjectRunConfigurationManager">
+  <configuration default="false" name="CalculatorApp" type="Application" factoryName="Application">
+    <option name="MAIN_CLASS_NAME" value="shapes.ShapeCalculator" />
+    <module name="ShapesCalculator" />
+    <option name="PROGRAM_PARAMETERS" value="SPHERE 3.5" />
+    <method v="2">
+      <option name="Make" enabled="true" />
+    </method>
+  </configuration>
+</component>

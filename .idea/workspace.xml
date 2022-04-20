@@ -2,21 +2,10 @@
 <project version="4">
   <component name="ChangeListManager">
     <list default="true" id="124d9c27-4119-4e44-ad02-2ff06038da3d" name="Default Changelist" comment="">
-      <change afterPath="$PROJECT_DIR$/src/test/java/calculator/CalculatorTest.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/.gitignore" beforeDir="false" afterPath="$PROJECT_DIR$/.gitignore" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/.idea/compiler.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/compiler.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/.idea/misc.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/misc.xml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/.idea/runConfigurations/CalculatorApp.xml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/README.md" beforeDir="false" afterPath="$PROJECT_DIR$/README.md" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/ShapesCalculator.iml" beforeDir="false" afterPath="$PROJECT_DIR$/ShapesCalculator.iml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/pom.xml" beforeDir="false" afterPath="$PROJECT_DIR$/pom.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/services/ShapeService.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/shapes/services/ShapeService.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/main/java/shapes/ShapeCalculator.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/shapes/ShapeCalculator.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/shapes/entities/Cube.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/shapes/entities/Cube.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/shapes/entities/Shape.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/shapes/entities/Shape.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/shapes/entities/Sphere.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/shapes/entities/Sphere.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/shapes/entities/Tetrahedron.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/shapes/entities/Tetrahedron.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/test/java/shapes/ShapeServiceTest.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/test/java/shapes/ShapeServiceTest.java" afterDir="false" />
     </list>
     <option name="EXCLUDED_CONVERTED_TO_IGNORED" value="true" />
     <option name="SHOW_DIALOG" value="false" />
@@ -47,6 +36,7 @@
     <property name="Repository.Attach.Annotations" value="false" />
     <property name="Repository.Attach.JavaDocs" value="false" />
     <property name="Repository.Attach.Sources" value="false" />
+    <property name="SHARE_PROJECT_CONFIGURATION_FILES" value="true" />
     <property name="com.intellij.testIntegration.createTest.CreateTestDialog.defaultLibrary" value="JUnit5" />
     <property name="com.intellij.testIntegration.createTest.CreateTestDialog.defaultLibrarySuperClass.JUnit5" value="" />
     <property name="last_opened_file_path" value="$PROJECT_DIR$" />
@@ -86,7 +76,7 @@
       </list>
     </option>
   </component>
-  <component name="RunManager" selected="JUnit.Tags (UnitTest )">
+  <component name="RunManager" selected="Application.CalculatorApp">
     <configuration name="CalculatorTest.emptyArgsReturnsExitOne" type="JUnit" factoryName="JUnit" temporary="true" nameIsGenerated="true">
       <module name="ShapesCalculator" />
       <extension name="coverage">
@@ -175,6 +165,7 @@
       </method>
     </configuration>
     <list>
+      <item itemvalue="Application.CalculatorApp" />
       <item itemvalue="JUnit.Tags (UnitTest )" />
       <item itemvalue="JUnit.CalculatorTest.parseShapeTypeReturnsCorrectSphereEnum" />
       <item itemvalue="JUnit.CalculatorTest.emptyArgsReturnsExitOne" />
