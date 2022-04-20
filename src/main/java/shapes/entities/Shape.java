@@ -4,7 +4,6 @@ package shapes.entities;
 public abstract class Shape {
 
     private double measure;
-    private double piValue = 3.141592653589793238;
 
     public Shape(double radius){
         this.setMeasure(radius);
@@ -25,10 +24,6 @@ public abstract class Shape {
     }
 
     public double getPiValue() {
-        return piValue;
-    }
-
-    public void setPiValue(double piValue) {
-        this.piValue = piValue;
+        return 3.141592653589793238;
     }
 }

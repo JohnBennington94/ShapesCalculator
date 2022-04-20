@@ -13,13 +13,13 @@ public class ShapeCalculator {
             System.exit(1);
         }
 
-        // Get enum for shape type passed in and parse double from
-        ShapeType shapeArg = parseShapeType(args[0]);
-        double measure = parseMeasure(args[1]);
-
         // Some output for user
         System.out.println("Shape type passed: " + args[0]);
         System.out.println("Measure (eg radius/width/edge) length passed: " + args[1]);
+
+        // Get enum for shape type passed in and parse double from
+        ShapeType shapeArg = parseShapeType(args[0]);
+        double measure = parseMeasure(args[1]);
 
         // Run calculator app for shape and measure
         double volume = runCalculatorApplication(shapeArg, measure);

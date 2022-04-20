@@ -74,6 +74,17 @@ class CalculatorTest {
         assert status == 1;
     }
 
+    @ParameterizedTest
+    @CsvSource({
+            "6.2, 6.2",
+            "5, 5.0"
+    })
+    @DisplayName("parseMeasure returns double from a string input")
+    void parseMeasureReturnsDoubleFromString(String measure, double expectedMeasure){
+        double actualMeasure = ShapeCalculator.parseMeasure(measure);
+        assert actualMeasure == expectedMeasure;
+    }
+
     @Test
     @DisplayName("parseMeasure method exits with code 1 when non int/double arg passed")
     void parseMeasureUnsupportedReturnsExitOne() throws Exception {
@@ -90,6 +101,16 @@ class CalculatorTest {
             ShapeCalculator.main(new String[0]);
         });
         assert status == 1;
+    }
+
+    @Test
+    @DisplayName("main method exits with code 0 when valid args passed")
+    void validArgsReturnsExitZero() throws Exception {
+        String[] args = { "SPHERE", "3" };
+        int status = SystemLambda.catchSystemExit(() -> {
+            ShapeCalculator.main(args);
+        });
+        assert status == 0;
     }
 
 }
