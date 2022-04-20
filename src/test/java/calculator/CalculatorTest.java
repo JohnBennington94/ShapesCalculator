@@ -16,7 +16,7 @@ class CalculatorTest {
     @ParameterizedTest
     @CsvSource({
             "SPHERE, 1, 4.19",
-            "SPHERE, 5, 523.81",
+            "SPHERE, 5, 523.60",
             "CUBE, 1, 1.00",
             "CUBE, 5, 125.00",
             "TETRAHEDRON, 1, 0.12",

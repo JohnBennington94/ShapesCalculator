@@ -5,7 +5,7 @@
 Pass String ShapeType and double/int "measure" eg radius to application
 
 ```
-Eg SPHERE and 3.5 outputs: 179.67 
+Eg SPHERE and 3.5 outputs: 179.59
 (see config .idea/runConfigurations/CalculatorApp.xml)
 ```
 
