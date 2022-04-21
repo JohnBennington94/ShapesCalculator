@@ -4,7 +4,6 @@
     <list default="true" id="124d9c27-4119-4e44-ad02-2ff06038da3d" name="Default Changelist" comment="">
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/main/java/shapes/ShapeCalculator.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/shapes/ShapeCalculator.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/shapes/entities/Shape.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/shapes/entities/Shape.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/test/java/calculator/CalculatorTest.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/test/java/calculator/CalculatorTest.java" afterDir="false" />
     </list>
     <option name="EXCLUDED_CONVERTED_TO_IGNORED" value="true" />
@@ -15,7 +14,7 @@
   </component>
   <component name="CoverageViewManager">
     <option name="myFlattenPackages" value="true" />
-    <option name="myElementSize" value="137" />
+    <option name="myElementSize" value="135" />
   </component>
   <component name="FileTemplateManagerImpl">
     <option name="RECENT_TEMPLATES">
@@ -205,11 +204,11 @@
     </list>
     <recent_temporary>
       <list>
+        <item itemvalue="JUnit.CalculatorTest.emptyArgsReturnsExitOne" />
         <item itemvalue="JUnit.CalculatorTest.validArgsReturnsExitZero" />
         <item itemvalue="JUnit.CalculatorTest.parseMeasureReturnsDoubleFromString" />
         <item itemvalue="JUnit.CalculatorTest.parseMeasureUnsupportedReturnsExitOne" />
         <item itemvalue="JUnit.CalculatorTest.parseShapeTypeUnsupportedReturnsExitOne" />
-        <item itemvalue="JUnit.CalculatorTest.emptyArgsReturnsExitOne" />
       </list>
     </recent_temporary>
   </component>
@@ -246,7 +245,7 @@
   </component>
   <component name="com.intellij.coverage.CoverageDataManagerImpl">
     <SUITE FILE_PATH="coverage/ShapesCalculator$CalculatorApp.ic" NAME="CalculatorApp Coverage Results" MODIFIED="1650494911194" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="idea" COVERAGE_BY_TEST_ENABLED="false" COVERAGE_TRACING_ENABLED="false" />
-    <SUITE FILE_PATH="coverage/ShapesCalculator$Tags__UnitTest__.ic" NAME="Tags (UnitTest ) Coverage Results" MODIFIED="1650495832184" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="idea" COVERAGE_BY_TEST_ENABLED="false" COVERAGE_TRACING_ENABLED="false">
+    <SUITE FILE_PATH="coverage/ShapesCalculator$Tags__UnitTest__.ic" NAME="Tags (UnitTest ) Coverage Results" MODIFIED="1650567518734" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="idea" COVERAGE_BY_TEST_ENABLED="false" COVERAGE_TRACING_ENABLED="false">
       <FILTER>shapes.*</FILTER>
     </SUITE>
     <SUITE FILE_PATH="coverage/ShapesCalculator$CalculatorTest.ic" NAME="CalculatorTest Coverage Results" MODIFIED="1650487264041" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="idea" COVERAGE_BY_TEST_ENABLED="false" COVERAGE_TRACING_ENABLED="false">

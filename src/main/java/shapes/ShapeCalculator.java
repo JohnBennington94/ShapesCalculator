@@ -1,5 +1,6 @@
 package shapes;
 
+import java.util.Scanner;
 import shapes.services.ShapeService;
 import shapes.entities.Shape;
 import shapes.entities.ShapeType;
@@ -7,26 +8,45 @@ import shapes.entities.ShapeType;
 public class ShapeCalculator {
 
     public static void main(String[] args){
-        // Exit if no args passed
-        if(args.length == 0){
-            System.out.println("No arguments passed to app");
-            System.exit(1);
+
+        String exit = "exit";
+
+        System.out.println("Welcome to the shape volume calculator program!");
+
+        // Using Scanner for Getting Input from User
+        Scanner in = new Scanner(System.in);
+
+        // While loop to keep application running able to serve user input
+        while(true) {
+
+            // Prompt user for a shape to calculate volume
+            System.out.println("Please enter a shape (Sphere, Cube, Tetrahedron) or 'exit' to stop the program:");
+            String shape = in.nextLine();
+            if(shape.equals(exit)){
+                System.out.println("Exit called, stopping program...");
+                System.exit(0);
+            }
+
+            ShapeType shapeArg = parseShapeType(shape);
+            if(shapeArg == null){
+                continue;
+            }
+
+            double measure = 0;
+            while(measure == 0) {
+                System.out.println("Please enter a measure (int/double format):");
+                String measureInput = in.nextLine();
+                measure = parseMeasure(measureInput);
+            }
+
+            // Run calculator app for shape and measure
+            double volume = runCalculatorApplication(shapeArg, measure);
+
+            // Output on console - while loop returns back to start
+            System.out.println("Volume of " + shapeArg + " with measure " + measure + " => " + volume);
+
         }
 
-        // Some output for user
-        System.out.println("Shape type passed: " + args[0]);
-        System.out.println("Measure (eg radius/width/edge) length passed: " + args[1]);
-
-        // Get enum for shape type passed in and parse double from
-        ShapeType shapeArg = parseShapeType(args[0]);
-        double measure = parseMeasure(args[1]);
-
-        // Run calculator app for shape and measure
-        double volume = runCalculatorApplication(shapeArg, measure);
-
-        // Output on console
-        System.out.println("Volume: " + volume);
-        System.exit(0);
     }
 
     public static ShapeType parseShapeType(String shapeType){
@@ -36,10 +56,8 @@ public class ShapeCalculator {
         try {
             shapeArg = ShapeType.valueOf(shapeType.toUpperCase());
         } catch(IllegalArgumentException e) {
-            System.out.println("Argument passed are not supported by app - shapes " +
+            System.out.println("Argument passed: " + shapeType + " is not supported by app - shapes " +
                     "allowed are: SPHERE, CUBE, TETRAHEDRON");
-            System.out.println("Shape type passed: " + shapeType);
-            System.exit(1);
         }
 
         return shapeArg;
@@ -52,9 +70,7 @@ public class ShapeCalculator {
         try {
             measure = Double.parseDouble(measureArg);
         } catch(IllegalArgumentException e) {
-            System.out.println("Argument passed for measure is non integer/double type");
-            System.out.println("Measure (eg radius/width/edge) length passed: " + measureArg);
-            System.exit(1);
+            System.out.println("Argument passed: " + measureArg + " is non integer/double type");
         }
 
         return measure;

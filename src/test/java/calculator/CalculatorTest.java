@@ -10,6 +10,9 @@ import org.junit.jupiter.params.provider.ValueSource;
 import shapes.entities.ShapeType;
 import shapes.ShapeCalculator;
 
+import java.io.ByteArrayInputStream;
+import java.io.InputStream;
+
 @Tag("UnitTest")
 class CalculatorTest {
 
@@ -66,12 +69,10 @@ class CalculatorTest {
     }
 
     @Test
-    @DisplayName("parseShapeType method exits with code 1 when incorrect arg passed")
-    void parseShapeTypeUnsupportedReturnsExitOne() throws Exception {
-        int status = SystemLambda.catchSystemExit(() -> {
-            ShapeCalculator.parseShapeType("test");
-        });
-        assert status == 1;
+    @DisplayName("parseShapeType method returns a null when unsupported shape passed")
+    void parseShapeTypeUnsupportedReturnsNull() {
+        ShapeType shapeType = ShapeCalculator.parseShapeType("test");
+        assert shapeType == null;
     }
 
     @ParameterizedTest
@@ -86,29 +87,23 @@ class CalculatorTest {
     }
 
     @Test
-    @DisplayName("parseMeasure method exits with code 1 when non int/double arg passed")
-    void parseMeasureUnsupportedReturnsExitOne() throws Exception {
-        int status = SystemLambda.catchSystemExit(() -> {
-            ShapeCalculator.parseMeasure("test");
-        });
-        assert status == 1;
+    @DisplayName("parseMeasure method returns 0 when non int/double arg passed")
+    void parseMeasureUnsupportedReturnsZero() {
+        double result = ShapeCalculator.parseMeasure("test");
+        assert result == 0;
     }
 
     @Test
-    @DisplayName("main method exits with code 1 when no args passed")
-    void emptyArgsReturnsExitOne() throws Exception {
+    @DisplayName("main method exits with code 0 when 'exit' is input")
+    void exitInputReturnsExitOne() throws Exception {
         int status = SystemLambda.catchSystemExit(() -> {
+            // Set input to 'exit'
+            String input = "exit";
+            InputStream in = new ByteArrayInputStream(input.getBytes());
+            System.setIn(in);
+
+            // Call main
             ShapeCalculator.main(new String[0]);
-        });
-        assert status == 1;
-    }
-
-    @Test
-    @DisplayName("main method exits with code 0 when valid args passed")
-    void validArgsReturnsExitZero() throws Exception {
-        String[] args = { "SPHERE", "3" };
-        int status = SystemLambda.catchSystemExit(() -> {
-            ShapeCalculator.main(args);
         });
         assert status == 0;
     }
