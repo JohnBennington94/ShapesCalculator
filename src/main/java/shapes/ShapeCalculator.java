@@ -9,35 +9,24 @@ public class ShapeCalculator {
 
     public static void main(String[] args){
 
-        String exit = "exit";
-
         System.out.println("Welcome to the shape volume calculator program!");
 
         // Using Scanner for Getting Input from User
-        Scanner in = new Scanner(System.in);
+        Scanner input = new Scanner(System.in);
 
         // While loop to keep application running able to serve user input
         while(true) {
 
             // Prompt user for a shape to calculate volume
             System.out.println("Please enter a shape (Sphere, Cube, Tetrahedron) or 'exit' to stop the program:");
-            String shape = in.nextLine();
-            if(shape.equals(exit)){
-                System.out.println("Exit called, stopping program...");
-                System.exit(0);
-            }
 
-            ShapeType shapeArg = parseShapeType(shape);
+            // Check if text passed is a supported shape type, continue to next loop if unsupported (restart flow)
+            ShapeType shapeArg = parseShapeType(input.nextLine());
             if(shapeArg == null){
                 continue;
             }
 
-            double measure = 0;
-            while(measure == 0) {
-                System.out.println("Please enter a measure (int/double format):");
-                String measureInput = in.nextLine();
-                measure = parseMeasure(measureInput);
-            }
+            double measure = getMeasureInputFromScanner(input);
 
             // Run calculator app for shape and measure
             double volume = runCalculatorApplication(shapeArg, measure);
@@ -49,9 +38,30 @@ public class ShapeCalculator {
 
     }
 
+    public static void checkIsExit(String input){
+        String exit = "EXIT";
+        if(input.toUpperCase().equals(exit)){
+            System.out.println("Exit called, stopping program...");
+            System.exit(0);
+        }
+    }
+
+    public static double getMeasureInputFromScanner(Scanner input){
+        double measure = 0;
+        while(measure == 0) {
+            System.out.println("Please enter a measure (int/double) or 'exit' to stop the program:");
+
+            // Parse double from input if possible, if not prompt again for input
+            measure = parseMeasure(input.nextLine());
+        }
+        return measure;
+    }
+
     public static ShapeType parseShapeType(String shapeType){
         // Get enum for shape type passed in
         ShapeType shapeArg = null;
+
+        checkIsExit(shapeType);
 
         try {
             shapeArg = ShapeType.valueOf(shapeType.toUpperCase());
@@ -66,6 +76,8 @@ public class ShapeCalculator {
     public static double parseMeasure(String measureArg){
         // Get measure double from args
         double measure = 0;
+
+        checkIsExit(measureArg);
 
         try {
             measure = Double.parseDouble(measureArg);

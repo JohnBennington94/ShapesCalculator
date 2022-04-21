@@ -1,6 +1,14 @@
 ## Shapes Calculator
 
-### Application Usage 
+### Building Jar
+
+```
+1. run package task in Maven
+2. in /target run java -jar ShapesCalculator-1.0-SNAPSHOT.jar
+3. Follow console output to calculate volume for shapes!
+```
+
+### Application Usage (Run/Debug in IntelliJ)
 
 Pass String ShapeType and double/int "measure" eg radius to application
 

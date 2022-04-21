@@ -1,14 +1,11 @@
 package shapes;
 
-import org.junit.jupiter.api.Assertions;
 import org.junit.jupiter.api.DisplayName;
 import org.junit.jupiter.api.Tag;
-import org.junit.jupiter.api.Test;
 import org.junit.jupiter.params.ParameterizedTest;
 import org.junit.jupiter.params.provider.ValueSource;
 import shapes.entities.*;
 import shapes.services.ShapeService;
-import sun.reflect.generics.reflectiveObjects.NotImplementedException;
 
 @Tag("UnitTest")
 class ShapeServiceTest {
@@ -38,14 +35,6 @@ class ShapeServiceTest {
         Shape shape = ShapeService.getShapeObject(ShapeType.TETRAHEDRON, measure);
         assert shape.getMeasure() == measure;
         assert shape instanceof Tetrahedron;
-    }
-
-    @Test
-    @DisplayName("Shape factory throws NotImplementedException for unexpected Enum")
-    void shapeFactoryThrowsExceptionForUnexpectedEnum() {
-        NotImplementedException thrown = Assertions.assertThrows(NotImplementedException.class, () -> {
-            ShapeService.getShapeObject(null, 6.0);
-        });
     }
 
 }

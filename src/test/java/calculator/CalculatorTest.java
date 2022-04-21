@@ -9,12 +9,18 @@ import org.junit.jupiter.params.provider.CsvSource;
 import org.junit.jupiter.params.provider.ValueSource;
 import shapes.entities.ShapeType;
 import shapes.ShapeCalculator;
-
 import java.io.ByteArrayInputStream;
 import java.io.InputStream;
+import java.util.Scanner;
 
 @Tag("UnitTest")
 class CalculatorTest {
+
+    /*
+
+    Test runCalculatorApplication() - Main logic tests for volume calculation
+
+     */
 
     @ParameterizedTest
     @CsvSource({
@@ -31,6 +37,77 @@ class CalculatorTest {
         double actualVolume = ShapeCalculator.runCalculatorApplication(shapeType, measure);
         assert actualVolume == expectedValue;
     }
+
+    /*
+
+    Test main()
+
+     */
+
+    @Test
+    @DisplayName("main method exits with code 0 when 'exit' is input")
+    void exitInputToMainReturnsExitOne() throws Exception {
+        int status = SystemLambda.catchSystemExit(() -> {
+            // Set input to 'exit'
+            String input = "exit";
+            InputStream in = new ByteArrayInputStream(input.getBytes());
+            System.setIn(in);
+
+            // Call main
+            ShapeCalculator.main(new String[0]);
+        });
+        assert status == 0;
+    }
+
+    /*
+
+    Test getMeasureInputFromScanner()
+
+     */
+
+    @Test
+    @DisplayName("getMeasure with scanner input returns expected double")
+    void getMeasureInputFromScannerReturnsDoubleForInput() {
+        // Set input to '3.9'
+        String input = "3.9";
+        InputStream in = new ByteArrayInputStream(input.getBytes());
+        System.setIn(in);
+
+        // Create a scanner for test
+        Scanner scan = new Scanner(System.in);
+
+        // Call getMeasureInputFromScanner()
+        double actualMeasure = ShapeCalculator.getMeasureInputFromScanner(scan);
+        double expectedMeasure = 3.9;
+
+        assert actualMeasure == expectedMeasure;
+    }
+
+    /*
+
+    Test checkIsExit()
+
+     */
+
+    @ParameterizedTest
+    @ValueSource(strings = {
+            "exit",
+            "EXIT",
+            "exIT"
+    })
+    @DisplayName("checkIsExit method exits 0 when is 'exit'")
+    void checkIsExitSystemExitsZeroWhenExit(String input) throws Exception {
+        int status = SystemLambda.catchSystemExit(() -> {
+            ShapeCalculator.checkIsExit(input);
+        });
+        assert status == 0;
+    }
+
+    /*
+
+    Test parseShapeType()
+
+     */
 
     @ParameterizedTest
     @ValueSource(strings = {
@@ -75,6 +152,12 @@ class CalculatorTest {
         assert shapeType == null;
     }
 
+    /*
+
+    Test parseMeasure()
+
+     */
+
     @ParameterizedTest
     @CsvSource({
             "6.2, 6.2",
@@ -91,21 +174,6 @@ class CalculatorTest {
     void parseMeasureUnsupportedReturnsZero() {
         double result = ShapeCalculator.parseMeasure("test");
         assert result == 0;
-    }
-
-    @Test
-    @DisplayName("main method exits with code 0 when 'exit' is input")
-    void exitInputReturnsExitOne() throws Exception {
-        int status = SystemLambda.catchSystemExit(() -> {
-            // Set input to 'exit'
-            String input = "exit";
-            InputStream in = new ByteArrayInputStream(input.getBytes());
-            System.setIn(in);
-
-            // Call main
-            ShapeCalculator.main(new String[0]);
-        });
-        assert status == 0;
     }
 
 }
